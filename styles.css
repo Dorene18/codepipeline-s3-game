@@ -36,8 +36,8 @@ h1 {
 }
 
 .card {
-    width: 110.8px;
-    height: 66.2px;
+    width: 10px;
+    height: 20px;
     background-color: #565c6f;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
