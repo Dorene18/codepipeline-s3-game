@@ -20,11 +20,6 @@ h1 {
     color: white; 
 }
 
-.instructions {
-    font-size: 20px;
-    margin-bottom: 30px;
-    color: #adbac7;
-}
 #timer-container {
     position: fixed;
     top: 10px; /* Adjust as needed */
@@ -38,43 +33,18 @@ h1 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
 }
 
-/* Additional styling as needed */
-
-
-#game-board {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+#question {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-.card {
-    width: 211.8px;
-    height: 166.2px;
-    background-color: #565c6f;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+#options {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
-.card img {
-    width: 100%;
-    height: auto;
-    visibility: hidden; /* Hide images by default */
-    display: block;
-}
-
-.card.show img {
-    visibility: visible; /* Show image when card is flipped */
-}
-
-#start-game {
+.option {
     background-color: #4caf50;
     color: white;
     padding: 12px 24px;
@@ -82,10 +52,11 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    margin-bottom: 10px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-#start-game:hover {
+.option:hover {
     background-color: #43a047; /* Darker on hover */
     transform: scale(1.05); /* Slightly enlarges on hover */
 }
