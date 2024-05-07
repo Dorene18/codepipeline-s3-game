@@ -100,24 +100,9 @@ startButton.addEventListener('click', () => {
         createBoard(); // Start the game
     });
 });
-    function shuffle(array) {
-        array.sort(() => 0.5 - Math.random());
-    }
-
-    
-    function flipCard() {
-        let cardId = this.getAttribute('data-id');
-        if (!cardsChosenId.includes(cardId)) {
-            cardsChosen.push(cardArray[cardId].name);
-            cardsChosenId.push(cardId);
-            this.setAttribute('src', cardArray[cardId].img);
-            if (cardsChosen.length === 2) {
-                setTimeout(checkForMatch, 500);
-            }
-        }
-    }
-
-    
-
-    startButton.addEventListener('click', createBoard);
+    document.querySelectorAll('.option').forEach(option => {
+    option.addEventListener('click', () => {
+        const selectedOption = option.textContent;
+        checkAnswer(selectedOption);
+    });
 });
