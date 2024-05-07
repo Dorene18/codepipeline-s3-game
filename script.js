@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('#game-board');
     const startButton = document.getElementById('start-game');
+     const timerDisplay = document.getElementById('time-left');
     let cardsChosen = [];
     let cardsChosenId = [];
     let cardsWon = [];
+     let timeLeft = 20;
 
     const cardArray = [
         { name: 'card1', img: 'images/1 (2).png' },
@@ -19,6 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'card10', img: 'images/10.png' },
         // ...add more pairs as needed
     ];
+     function startTimer() {
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerDisplay.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                alert('Time is up! Game over!');
+            }
+        }, 1000); // Update timer every second
+    }
 
     function shuffle(array) {
         array.sort(() => 0.5 - Math.random());
