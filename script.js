@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createBoard() {
+        startTimer();
         shuffle(cardArray);
         grid.innerHTML = '';
         cardsWon = [];
