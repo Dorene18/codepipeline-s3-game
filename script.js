@@ -38,6 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
             grid.appendChild(card);
         }
     }
+function displayFlashcard(index) {
+    const flashcard = flashcards[index];
+    const questionElement = document.getElementById('question');
+    const optionsContainer = document.getElementById('options');
+
+    questionElement.textContent = flashcard.question;
+    optionsContainer.innerHTML = '';
+
+    flashcard.options.forEach((option, i) => {
+        const optionButton = document.createElement('button');
+        optionButton.textContent = option;
+        optionButton.classList.add('option');
+        optionButton.addEventListener('click', () => {
+            checkAnswer(option);
+        });
+        optionsContainer.appendChild(optionButton);
+    });
+}
+
+function checkAnswer(selectedOption) {
+    const flashcard = flashcards[currentFlashcardIndex];
+    const correctAnswer = flashcard.correctAnswer;
+
+    if (selectedOption === correctAnswer) {
+        alert('Congratulations! You chose the correct answer.');
+        nextFlashcard();
+    } else {
+        alert(`Incorrect. The correct answer is ${correctAnswer}.`);
+        nextFlashcard();
+    }
+}
+
+function nextFlashcard() {
+    currentFlashcardIndex++;
+    if (currentFlashcardIndex < flashcards.length) {
+        displayFlashcard(currentFlashcardIndex);
+    } else {
+        alert('Congratulations! You have completed all the flashcards.');
+    }
+}
 
     
      function startTimer() {
