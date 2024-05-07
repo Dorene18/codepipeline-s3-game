@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsWon = [];
 
     const cardArray = [
-        { name: 'card1', img: 'https://github.com/Dorene18/codepipeline-s3-game/blob/main/images/1.png' },
+        { name: 'card1', img: 'images/1 (2).png' },
         { name: 'card2', img: 'images/2.png' },
         { name: 'card3', img: 'images/3.jpeg' },
         { name: 'card4', img: 'images/cloudfront.jpeg' },
