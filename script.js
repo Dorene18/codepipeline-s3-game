@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'card2', img: 'images/drake.png' },
         { name: 'card3', img: 'images/fine.png' },
         { name: 'card3', img: 'images/fine.png' },
-        { name: 'card4', img: 'images/rollsafe.png' },
+        { name: 'card7', img: 'images/7.png' },
         { name: 'card8', img: 'images/8.jpeg' },
         { name: 'card9', img: 'images/9.jpeg' },
         { name: 'card10', img: 'images/10.png' },
