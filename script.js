@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let cardsChosenId = [];
     let cardsWon = [];
      let timeLeft = 20;
+    let countdown;
 
     const cardArray = [
         { name: 'card1', img: 'images/1 (2).png' },
@@ -32,7 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }, 1000); // Update timer every second
     }
-
+startButton.addEventListener('click', () => {
+        if (countdown) {
+            clearInterval(countdown); // Reset the timer if it's already running
+        }
+        timeLeft = 20; // Reset the time when the game starts
+        timerDisplay.textContent = timeLeft; // Update the display
+        createBoard(); // Start the game
+    });
+});
     function shuffle(array) {
         array.sort(() => 0.5 - Math.random());
     }
